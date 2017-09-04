@@ -126,6 +126,11 @@
       <p>{{ hello }}</p>
       <button v-on:click="changeAppOneTitle">Change App one's Title</button>
       <greeting></greeting>
+
+      <input type="text" ref="input"/>
+      <button v-on:click="submit">Submit</button>
+      <h2>You favor food: {{favorfood}}</h2>
+      <div ref="test">hello</div>
     </div>
 
     <script src="app.js"></script>

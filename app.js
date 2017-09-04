@@ -117,11 +117,16 @@ var one = new Vue({
 var two = new Vue({
   el:'#vue-app-two',
   data: {
-    title: 'Vue App two'
+    title: 'Vue App two',
+    favorfood: 'Apple',
   },
   methods: {
     changeAppOneTitle: function() {
       one.title = 'App one title changed';
+    },
+    submit: function() {
+      console.log(this.$refs.test.innerText);
+      this.favorfood = this.$refs.input.value;
     }
   },
   computed: {
