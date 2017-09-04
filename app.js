@@ -1,6 +1,7 @@
-new Vue({
-  el:'#vue-app',
+var one = new Vue({
+  el:'#vue-app-one',
   data: {
+    title: 'Vue App One',
     name: 'Ding',
     job: 'Dev',
     website:'https://tshulgin.wixsite.com/dingying',
@@ -77,6 +78,10 @@ new Vue({
   },
 
   computed: {
+
+    hello: function() {
+      return 'Hello from App One';
+    },
     addToA: function() {
       console.log('addToA');
       return this.age + this.a;
@@ -94,3 +99,22 @@ new Vue({
     }
   }
 });
+
+var two = new Vue({
+  el:'#vue-app-two',
+  data: {
+    title: 'Vue App two'
+  },
+  methods: {
+    changeAppOneTitle: function() {
+      one.title = 'App one title changed';
+    }
+  },
+  computed: {
+    hello: function() {
+      return 'Yo dudes, here is app Two';
+    }
+  }
+});
+
+two.title = 'App two title changed outside';

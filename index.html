@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="vue-app">
+    <div id="vue-app-one">
 
        <!-- Data & methods -->
       <h1>{{greet('night')}}</h1>
@@ -116,6 +116,14 @@
         <button v-on:click="restart">Restart</button>
       </div>
 
+      <h1>{{title}}</h1>
+      <p>{{ hello }}</p>
+    </div>
+
+    <div id="vue-app-two">
+      <h1>{{title}}</h1>
+      <p>{{ hello }}</p>
+      <button v-on:click="changeAppOneTitle">Change App one's Title</button>
     </div>
 
     <script src="app.js"></script>
