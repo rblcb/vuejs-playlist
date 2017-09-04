@@ -19,7 +19,9 @@ new Vue({
       {name: 'Wang', age: 25},
       {name: 'Zheng', age: 20},
       {name: 'Cui', age: 30}
-    ]
+    ],
+    health:100,
+    ended: false
   },
   methods: {
     greet: function(time){
@@ -60,6 +62,18 @@ new Vue({
       console.log('addToB');
       return this.age + this.b;
     }*/
+
+    punch: function() {
+      this.health -= 10;
+      if(this.health <= 0) {
+        this.ended = true;
+      }
+    },
+
+    restart: function() {
+      this.health = 100;
+      this.ended = false;
+    }
   },
 
   computed: {
